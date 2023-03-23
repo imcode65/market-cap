@@ -1,7 +1,7 @@
 const SearchBar: React.FC = () => {
   return (
-    <div className="flex justify-between items-center py-2 px-8 border-b-2">
-      <div className="flex">
+    <div className="flex flex-wrap justify-between items-center py-2 px-8 border-b-2">
+      <div className="flex flex-wrap">
         <div>
           <span className="font-bold text-2xl mr-10">El Capition</span>
         </div>

@@ -2,8 +2,8 @@ import StatusInfo from "../../components/Dashboard/statusInfo";
 
 const StatusBar: React.FC = () => {
   return (
-    <div className="flex justify-between items-center py-2 px-8 border-b-2">
-      <div className="flex items-center">
+    <div className="flex justify-between items-center py-2 px-8 border-b-2 flex-wrap">
+      <div className="flex flex-wrap">
         <StatusInfo
           className="font-bold mr-5"
           text="Crypto Listed:"
