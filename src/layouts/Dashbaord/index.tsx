@@ -1,4 +1,5 @@
 import MarketCapComponent from "../../components/Dashboard/marketCapComponent";
+import TabComponent from "../../components/Dashboard/tabComponent";
 
 const data = [
   {
@@ -29,19 +30,19 @@ const data = [
 
 const Dashboard: React.FC = () => {
   return (
-    <div className="bg-gray-200 px-8 py-8">
+    <div className="bg-gray-200 px-8 py-8 min-h-screen pt-40 static">
       <div className="mb-8">
         <p className="text-black font-bold text-3xl">
           Today's Cryptocurrency Prices by Market Cap
         </p>
         <p className="text-gray-500">
           The global market cap is{" "}
-          <span className="text-green-500">$1.18T,</span>a
-          <span className="text-green-500">+1.38%</span> increase over the last
-          day. <span className="text-gray-400">Read More</span>
+          <span className="text-green-500 font-bold">$1.18T,</span>a
+          <span className="text-green-500 font-bold">+1.38%</span> increase over
+          the last day. <span className="text-gray-400">Read More</span>
         </p>
       </div>
-      <div className="flex flex-wrap gap-5">
+      <div className="flex flex-wrap gap-5 my-6">
         {data.map((val, key) => {
           return (
             <div className="flex-1" key={key}>
@@ -50,6 +51,7 @@ const Dashboard: React.FC = () => {
           );
         })}
       </div>
+      <TabComponent />
     </div>
   );
 };

@@ -2,7 +2,7 @@ import StatusInfo from "../../components/Dashboard/statusInfo";
 
 const StatusBar: React.FC = () => {
   return (
-    <div className="flex justify-between items-center py-2 px-8 border-b-2 flex-wrap">
+    <div className="flex justify-between items-center py-2 px-8 border-b-2 flex-wrap h-16">
       <div className="flex flex-wrap">
         <StatusInfo
           className="font-bold mr-5"

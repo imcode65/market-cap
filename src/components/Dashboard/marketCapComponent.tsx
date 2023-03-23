@@ -31,7 +31,7 @@ const MarketCapComponent: React.FC<IMarketCap> = (props) => {
                 {val.icon === "SHIB" ? (
                   <img
                     src="https://s2.coinmarketcap.com/static/img/coins/64x64/5994.png"
-                    className="h-4 w-4"
+                    className="h-5 w-5"
                     alt="SHIB"
                   ></img>
                 ) : (

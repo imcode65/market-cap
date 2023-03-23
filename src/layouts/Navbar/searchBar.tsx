@@ -1,13 +1,22 @@
 const SearchBar: React.FC = () => {
   return (
-    <div className="flex flex-wrap justify-between items-center py-2 px-8 border-b-2">
+    <div className="flex flex-wrap justify-between items-center py-2 px-8 border-b-2 h-16">
       <div className="flex flex-wrap">
-        <div>
-          <span className="font-bold text-2xl mr-10">El Capition</span>
+        <div className="flex items-center">
+          <img className="w-8 h-8 mr-2" src="/trending.png" alt="not found" />
+          <span className="font-bold text-2xl mr-10 hover:text-blue-500 hover:cursor-pointer">
+            El Capition
+          </span>
         </div>
-        <span className="font-bold text-2xl mr-10">Cryptocurrencies</span>
-        <span className="font-bold text-2xl mr-10">FAQ</span>
-        <span className="font-bold text-2xl mr-10">Community</span>
+        <span className="font-bold text-2xl mr-10 hover:text-blue-500 hover:cursor-pointer">
+          Cryptocurrencies
+        </span>
+        <span className="font-bold text-2xl mr-10 hover:text-blue-500 hover:cursor-pointer">
+          FAQ
+        </span>
+        <span className="font-bold text-2xl mr-10 hover:text-blue-500 hover:cursor-pointer">
+          Community
+        </span>
       </div>
       <div className="">
         <div className="flex items-center p-1 px-4 bg-gray-300 placeholder-gray-400 border-none appearance-none rounded-full">
