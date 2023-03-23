@@ -1,0 +1,9 @@
+const Dashboard: React.FC = () => {
+  return (
+    <div>
+      <p className="text-blue-300 text-2xl">Dashbaord</p>
+    </div>
+  );
+};
+
+export default Dashboard;
