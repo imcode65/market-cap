@@ -31,7 +31,7 @@ const data = [
 
 const Dashboard: React.FC = () => {
   return (
-    <div className="bg-gray-200 px-8 py-8 min-h-screen pt-40 static">
+    <div className="bg-gray-200 px-10 py-8 min-h-screen pt-40 static">
       <div className="mb-8">
         <p className="text-black font-bold text-3xl">
           Today's Cryptocurrency Prices by Market Cap

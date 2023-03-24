@@ -32,9 +32,10 @@ const DropDownAllTypes: React.FC = () => {
     <div className="relative inline-block group">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="bg-gray-200 py-2 px-4 rounded-md font-bold"
+        className="bg-white p-4 rounded-full font-bold flex items-center"
       >
         All Types
+        <img className="w-5 mt-1" src="arrow-down.svg" alt="arrow-down"></img>
       </button>
       <div
         className={`mt-2 px-8 py-4 absolute z-10 -left-[535px] bg-white rounded-2xl shadow-lg transform transition-all duration-300 ease-in-out ${
@@ -56,9 +57,9 @@ const DropDownAllTypes: React.FC = () => {
               stroke="currentColor"
             >
               <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
               />
             </svg>
