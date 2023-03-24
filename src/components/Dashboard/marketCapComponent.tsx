@@ -1,3 +1,5 @@
+import arrowDown from "../../assets/icons/arrow-down.svg";
+import ArrowDown from "../../assets/icons/arrowDown";
 export interface IData {
   icon: string;
   text: string;
@@ -5,6 +7,7 @@ export interface IData {
 }
 export interface IMarketCap {
   title: string;
+  type: string;
   data: IData[];
 }
 
@@ -20,7 +23,7 @@ const MarketCapComponent: React.FC<IMarketCap> = (props) => {
           ></img>
           <span className="font-bold text-xl">{props.title}</span>
         </div>
-        <span className="text-gray-400 hover:cursor-pointer hover:text-gray-500">
+        <span className="text-gray-500 hover:cursor-pointer hover:text-gray-600">
           More &gt;
         </span>
       </div>
@@ -46,7 +49,29 @@ const MarketCapComponent: React.FC<IMarketCap> = (props) => {
                 <span className="font-bold">{val.text}</span>
                 <span className="text-gray-400">{val.icon}</span>
               </div>
-              <span>{val.value}</span>
+              {props.type === "trending" ? (
+                <div>
+                  {parseFloat(val.value) < 0 ? (
+                    <span className="text-red-600 font-bold flex">
+                      <ArrowDown
+                        className="mr-1 mt-1"
+                        width={20}
+                        height={20}
+                        color="#ff0000"
+                      />
+                      {Math.abs(parseFloat(val.value))}%
+                    </span>
+                  ) : (
+                    <span className="text-green-600 font-bold">
+                      {val.value}%
+                    </span>
+                  )}
+                </div>
+              ) : (
+                <div>
+                  <span className="font-bold">${val.value}</span>
+                </div>
+              )}
             </div>
           );
         })}

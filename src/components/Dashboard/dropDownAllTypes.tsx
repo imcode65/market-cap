@@ -1,5 +1,5 @@
 import { useState } from "react";
-import arrowDown from "../../assets/icons/arrow-down.svg";
+import ArrowDown from "../../assets/icons/arrowDown";
 
 const typeData = [
   "All",
@@ -38,7 +38,7 @@ const DropDownAllTypes: React.FC = () => {
         }`}
       >
         All Types
-        <img className="w-5 mt-1" src={arrowDown} alt="arrow-down"></img>
+        <ArrowDown className="w-5 h-5" width={32} height={32} />
       </button>
       <div
         className={`mt-2 px-8 py-4 absolute z-10 -left-[535px] bg-white rounded-2xl shadow-lg transform transition-all duration-300 ease-in-out ${

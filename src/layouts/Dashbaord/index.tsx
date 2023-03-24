@@ -5,6 +5,7 @@ import DropDownAllTypes from "../../components/Dashboard/dropDownAllTypes";
 const data = [
   {
     title: "Trending",
+    type: "trending",
     data: [
       { text: "Shiba Inu", icon: "SHIB", value: "-4.28" },
       { text: "Shiba Inu", icon: "SHIB", value: "-4.28" },
@@ -13,18 +14,20 @@ const data = [
   },
   {
     title: "Biggest Gainer",
+    type: "price",
     data: [
-      { text: "Timeseries AI", icon: "TIMESERIES", value: "$0.000251" },
-      { text: "Timeseries AI", icon: "TIMESERIES", value: "$0.000251" },
-      { text: "Timeseries AI", icon: "TIMESERIES", value: "$0.000251" },
+      { text: "Timeseries AI", icon: "TIMESERIES", value: "0.000251" },
+      { text: "Timeseries AI", icon: "TIMESERIES", value: "0.000251" },
+      { text: "Timeseries AI", icon: "TIMESERIES", value: "0.000251" },
     ],
   },
   {
     title: "Recently Updated Socials",
+    type: "price",
     data: [
-      { text: "Timeseries AI", icon: "TIMESERIES", value: "$0.000251" },
-      { text: "shiba", icon: "SHIB", value: "$0.000251" },
-      { text: "Timeseries AI", icon: "TIMESERIES", value: "$0.000251" },
+      { text: "Timeseries AI", icon: "TIMESERIES", value: "0.000251" },
+      { text: "shiba", icon: "SHIB", value: "0.000251" },
+      { text: "Timeseries AI", icon: "TIMESERIES", value: "0.000251" },
     ],
   },
 ];
@@ -47,7 +50,11 @@ const Dashboard: React.FC = () => {
         {data.map((val, key) => {
           return (
             <div className="flex-1" key={key}>
-              <MarketCapComponent title={val.title} data={val.data} />
+              <MarketCapComponent
+                title={val.title}
+                type={val.type}
+                data={val.data}
+              />
             </div>
           );
         })}
