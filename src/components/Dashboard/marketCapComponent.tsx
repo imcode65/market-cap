@@ -15,12 +15,14 @@ const MarketCapComponent: React.FC<IMarketCap> = (props) => {
         <div className="flex items-center">
           <img
             className="mr-2 h-6 w-6"
-            src={`/${props.title}.png`}
+            src={`img/${props.title}.png`}
             alt="Not found"
           ></img>
           <span className="font-bold text-xl">{props.title}</span>
         </div>
-        <span className="text-gray-400">More &gt;</span>
+        <span className="text-gray-400 hover:cursor-pointer hover:text-gray-500">
+          More &gt;
+        </span>
       </div>
       <div className="py-4">
         {props.data.map((val, key) => {

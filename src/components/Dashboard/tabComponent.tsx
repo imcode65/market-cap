@@ -55,7 +55,7 @@ const TabComponent: React.FC = () => {
         })}
       </div>
       <div
-        className="absolute z-10 block bottom-4 bg-yellow-500 transition-all duration-300 h-8 rounded-xl"
+        className="absolute z-10 block bottom-4 bg-yellow-400 transition-all duration-300 h-8 rounded-xl"
         style={{ left: tabUnderlineLeft, width: tabUnderlineWidth }}
       />
     </div>

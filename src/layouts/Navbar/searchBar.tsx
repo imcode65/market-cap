@@ -3,7 +3,11 @@ const SearchBar: React.FC = () => {
     <div className="flex flex-wrap justify-between items-center py-2 px-10 border-b-2 h-16">
       <div className="flex flex-wrap">
         <div className="flex items-center">
-          <img className="w-8 h-8 mr-2" src="/trending.png" alt="not found" />
+          <img
+            className="w-8 h-8 mr-2"
+            src="img/trending.png"
+            alt="not found"
+          />
           <span className="font-bold text-2xl mr-10 hover:text-blue-500 hover:cursor-pointer">
             El Capition
           </span>

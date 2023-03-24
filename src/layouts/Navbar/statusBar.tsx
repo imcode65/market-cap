@@ -1,4 +1,5 @@
 import StatusInfo from "../../components/Dashboard/statusInfo";
+import ConnectWalletIcon from "../../assets/icons/wallet.svg";
 
 const StatusBar: React.FC = () => {
   return (
@@ -34,7 +35,7 @@ const StatusBar: React.FC = () => {
         <span className="cursor-pointer font-bold mr-4">Whachlist</span>
         <span className="cursor-pointer font-bold mr-4">Portfolio</span>
         <button className="bg-gray-300 hover:bg-gray-400 text-black font-bold py-2 px-4 inline-flex items-center rounded-full">
-          <img className="w-5 h-5 mr-2" src="wallet.svg" alt="wallet" />
+          <img className="w-5 h-5 mr-2" src={ConnectWalletIcon} alt="wallet" />
           <span>Connect Wallet</span>
         </button>
       </div>
