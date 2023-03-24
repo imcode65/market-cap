@@ -41,7 +41,7 @@ const StatusBar: React.FC = () => {
           Portfolio
         </span>
         <button className="bg-gray-300 hover:bg-gray-400 text-black font-bold py-2 px-4 inline-flex items-center rounded-full">
-          <WalletIcon className="mr-1" width={24} height={24} />
+          <WalletIcon className="mr-2" width={24} height={24} />
           <span>Connect Wallet</span>
         </button>
       </div>

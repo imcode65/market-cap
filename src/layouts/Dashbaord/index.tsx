@@ -26,7 +26,7 @@ const data = [
     type: "price",
     data: [
       { text: "Timeseries AI", icon: "TIMESERIES", value: "0.000251" },
-      { text: "shiba", icon: "SHIB", value: "0.000251" },
+      { text: "Shiba Inu", icon: "SHIB", value: "0.000251" },
       { text: "Timeseries AI", icon: "TIMESERIES", value: "0.000251" },
     ],
   },
