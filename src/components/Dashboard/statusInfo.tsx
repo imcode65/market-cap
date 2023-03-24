@@ -8,7 +8,7 @@ const StatusInfo: React.FC<IStatusInfo> = (props) => {
   return (
     <div className={`${props.className} text-sm`}>
       <span className="mr-1">{props.text}</span>
-      <span className="text-blue-400">{props.value}</span>
+      <span className="text-light-blue">{props.value}</span>
     </div>
   );
 };
