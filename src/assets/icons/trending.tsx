@@ -27,8 +27,8 @@ const TrendingIcon: React.FC<IIcon> = (props) => {
           y2="23.3337"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#F29D3E" />
-          <stop offset="1" stop-color="#B63737" />
+          <stop stopColor="#F29D3E" />
+          <stop offset="1" stopColor="#B63737" />
         </linearGradient>
       </defs>
     </svg>

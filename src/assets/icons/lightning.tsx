@@ -27,8 +27,8 @@ const LightningIcon: React.FC<IIcon> = (props) => {
           y2="18.167"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#F29D3E" />
-          <stop offset="1" stop-color="#FACB4C" />
+          <stop stopColor="#F29D3E" />
+          <stop offset="1" stopColor="#FACB4C" />
         </linearGradient>
       </defs>
     </svg>

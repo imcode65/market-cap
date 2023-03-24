@@ -32,8 +32,8 @@ const StarIcon: React.FC<IIcon> = (props) => {
           y2="20.501"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#2BBAD9" />
-          <stop offset="1" stop-color="#2BBAD9" stop-opacity="0.48" />
+          <stop stopColor="#2BBAD9" />
+          <stop offset="1" stopColor="#2BBAD9" stopOpacity="0.48" />
         </linearGradient>
       </defs>
     </svg>

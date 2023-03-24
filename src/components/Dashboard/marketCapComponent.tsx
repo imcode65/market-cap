@@ -36,9 +36,8 @@ const MarketCapComponent: React.FC<IMarketCap> = (props) => {
       </div>
       <div className="py-4">
         {props.data.map((val, index) => {
-          console.log(val.icon);
           return (
-            <div className="flex justify-between m-2">
+            <div className="flex justify-between m-2" key={index}>
               <div className="flex items-center gap-3">
                 <span>{index + 1}</span>
                 {val.icon === "SHIB" ? (
