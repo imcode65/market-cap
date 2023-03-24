@@ -1,5 +1,10 @@
-import arrowDown from "../../assets/icons/arrow-down.svg";
-import ArrowDown from "../../assets/icons/arrowDown";
+import {
+  TrendingIcon,
+  LightningIcon,
+  StarIcon,
+  ArrowDownIcon,
+  ArrowUpIcon,
+} from "../../assets/icons";
 export interface IData {
   icon: string;
   text: string;
@@ -16,11 +21,13 @@ const MarketCapComponent: React.FC<IMarketCap> = (props) => {
     <div className="rounded-3xl p-6 bg-white">
       <div className="flex justify-between">
         <div className="flex items-center">
-          <img
-            className="mr-2 h-6 w-6"
-            src={`img/${props.title}.png`}
-            alt="Not found"
-          ></img>
+          {props.title === "Trending" ? (
+            <TrendingIcon width={32} height={32} />
+          ) : props.title === "Biggest Gainer" ? (
+            <LightningIcon width={32} height={32} />
+          ) : (
+            <StarIcon width={32} height={32} />
+          )}
           <span className="font-bold text-xl">{props.title}</span>
         </div>
         <span className="text-gray-500 hover:cursor-pointer hover:text-gray-600">
@@ -53,7 +60,7 @@ const MarketCapComponent: React.FC<IMarketCap> = (props) => {
                 <div>
                   {parseFloat(val.value) < 0 ? (
                     <span className="text-red-600 font-bold flex">
-                      <ArrowDown
+                      <ArrowDownIcon
                         className="mr-1 mt-1"
                         width={20}
                         height={20}
@@ -62,8 +69,14 @@ const MarketCapComponent: React.FC<IMarketCap> = (props) => {
                       {Math.abs(parseFloat(val.value))}%
                     </span>
                   ) : (
-                    <span className="text-green-600 font-bold">
-                      {val.value}%
+                    <span className="text-green-600 font-bold flex">
+                      <ArrowUpIcon
+                        className="mr-1 mt-1"
+                        width={20}
+                        height={20}
+                        color="#00ff00"
+                      />
+                      {Math.abs(parseFloat(val.value))}%
                     </span>
                   )}
                 </div>

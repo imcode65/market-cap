@@ -5,7 +5,7 @@ export interface IIcon {
   color?: string;
 }
 
-const ArrowDown: React.FC<IIcon> = (props) => {
+const ArrowDownIcon: React.FC<IIcon> = (props) => {
   return (
     <svg
       className={props.className}
@@ -21,4 +21,4 @@ const ArrowDown: React.FC<IIcon> = (props) => {
   );
 };
 
-export default ArrowDown;
+export default ArrowDownIcon;

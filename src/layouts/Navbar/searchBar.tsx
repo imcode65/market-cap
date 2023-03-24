@@ -1,11 +1,11 @@
-import CaptionSvg from "../../assets/icons/caption.svg";
+import { CapitionIcon } from "../../assets/icons";
 
 const SearchBar: React.FC = () => {
   return (
     <div className="flex flex-wrap justify-between items-center py-2 px-10 border-b-2 h-16">
       <div className="flex flex-wrap">
         <div className="flex items-center">
-          <img className="w-8 h-8 mr-2" src={CaptionSvg} alt="not found" />
+          <CapitionIcon className="mr-2 w-10 h-10" />
           <span className="font-bold text-2xl mr-10 hover:text-blue-500 hover:cursor-pointer">
             El Capition
           </span>

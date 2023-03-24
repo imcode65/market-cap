@@ -8,7 +8,7 @@ const data = [
     type: "trending",
     data: [
       { text: "Shiba Inu", icon: "SHIB", value: "-4.28" },
-      { text: "Shiba Inu", icon: "SHIB", value: "-4.28" },
+      { text: "Shiba Inu", icon: "SHIB", value: "4.28" },
       { text: "Shiba Inu", icon: "SHIB", value: "-4.28" },
     ],
   },
