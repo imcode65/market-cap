@@ -1,5 +1,6 @@
 import MarketCapComponent from "../../components/Dashboard/marketCapComponent";
 import TabComponent from "../../components/Dashboard/tabComponent";
+import DropDownAllTypes from "../../components/Dashboard/dropDownAllTypes";
 
 const data = [
   {
@@ -51,7 +52,10 @@ const Dashboard: React.FC = () => {
           );
         })}
       </div>
-      <TabComponent />
+      <div className="flex justify-between">
+        <TabComponent />
+        <DropDownAllTypes />
+      </div>
     </div>
   );
 };

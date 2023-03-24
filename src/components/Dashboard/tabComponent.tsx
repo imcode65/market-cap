@@ -39,32 +39,25 @@ const TabComponent: React.FC = () => {
   }, [activeTabIndex]);
 
   return (
-    <div className="flex justify-between">
-      <div className="relative px-6 bg-white rounded-xl">
-        <div className="flex border-b">
-          {tabsData.map((tab, idx) => {
-            return (
-              <button
-                key={idx}
-                ref={(el) => (tabsRef.current[idx] = el)}
-                className="p-3 mx-4 z-20 font-bold"
-                onClick={() => setActiveTabIndex(idx)}
-              >
-                {tab.label}
-              </button>
-            );
-          })}
-        </div>
-        <div
-          className="absolute z-10 block bottom-2 bg-yellow-500 transition-all duration-300 h-8 rounded-xl"
-          style={{ left: tabUnderlineLeft, width: tabUnderlineWidth }}
-        />
+    <div className="relative px-6 py-2 bg-white rounded-xl">
+      <div className="flex">
+        {tabsData.map((tab, idx) => {
+          return (
+            <button
+              key={idx}
+              ref={(el) => (tabsRef.current[idx] = el)}
+              className="p-3 mx-4 z-20 font-bold"
+              onClick={() => setActiveTabIndex(idx)}
+            >
+              {tab.label}
+            </button>
+          );
+        })}
       </div>
-      <div>
-        <button className="bg-white px-4 py-2 rounded-full font-bold">
-          All Types
-        </button>
-      </div>
+      <div
+        className="absolute z-10 block bottom-4 bg-yellow-500 transition-all duration-300 h-8 rounded-xl"
+        style={{ left: tabUnderlineLeft, width: tabUnderlineWidth }}
+      />
     </div>
   );
 };
