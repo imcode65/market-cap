@@ -32,7 +32,9 @@ const DropDownAllTypes: React.FC = () => {
     <div className="relative inline-block group">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="bg-white p-4 rounded-full font-bold flex items-center border hover:border-2 hover:border-yellow-400"
+        className={`bg-white px-4 py-3 rounded-full font-bold flex items-center hover:outline-yellow-400 ${
+          isOpen ? "outline outline-yellow-400 outline-1" : "outline-none"
+        }`}
       >
         All Types
         <img className="w-5 mt-1" src="arrow-down.svg" alt="arrow-down"></img>
