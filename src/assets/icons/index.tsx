@@ -7,6 +7,8 @@ import TrendingIcon from "./trending";
 import WatchlistIcon from "./watchlist";
 import StarIcon from "./star";
 import CapitionIcon from "./capition";
+import MenuIcon from "./menu";
+import CloseIcon from "./close";
 
 export {
   WalletIcon,
@@ -18,4 +20,6 @@ export {
   WatchlistIcon,
   StarIcon,
   CapitionIcon,
+  MenuIcon,
+  CloseIcon,
 };

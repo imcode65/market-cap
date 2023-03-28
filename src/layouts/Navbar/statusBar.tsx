@@ -3,7 +3,7 @@ import { PortfolioIcon, WatchlistIcon, WalletIcon } from "../../assets/icons";
 
 const StatusBar: React.FC = () => {
   return (
-    <div className="flex justify-between items-center py-2 px-10 border-b-2 flex-nowrap h-16">
+    <div className="flex justify-between items-center py-2 px-10 border-b-2 h-16">
       <div className="flex">
         <StatusInfo className="mr-4" text="Crypto Listed: " value="3" />
         <StatusInfo
