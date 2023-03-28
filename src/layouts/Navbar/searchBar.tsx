@@ -9,7 +9,7 @@ import {
 } from "../../assets/icons";
 
 const SearchBar: React.FC = () => {
-  const [menuStatus, setMenuStatus] = useState<boolean>(false);
+  const [menuStatus, setMenuStatus] = useState<boolean>(true);
 
   return (
     <div className="flex items-center justify-between py-2 px-10 border-b-2 h-16">
@@ -30,7 +30,7 @@ const SearchBar: React.FC = () => {
           </span>
         </div>
       </div>
-      <div className="hidden xl:block">
+      <div className="hidden lg:block">
         <div className="flex items-center p-1 px-4 bg-gray-300 placeholder-gray-400 border-none rounded-full">
           <input
             placeholder="Search..."
@@ -54,12 +54,12 @@ const SearchBar: React.FC = () => {
       </div>
       <div className="block md:hidden">
         <button className="p-2" onClick={() => setMenuStatus(!menuStatus)}>
-          <MenuIcon className="font-black" width={24} height={24} />
+          <MenuIcon className="font-black" width={26} height={26} />
         </button>
       </div>
       {/* responsive sidebar start */}
       <div
-        className={`transform w-full z-40 h-full absolute bg-gray-100 top-0 left-0 shadow flex-col sm:hidden transition duration-150 ease-in-out ${
+        className={`transform w-full z-40 h-full absolute bg-gray-100 top-0 left-0 shadow flex-col transition duration-150 ease-in-out ${
           menuStatus ? "-translate-x-full" : ""
         }`}
       >

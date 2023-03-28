@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom";
 
 const BitcoinPage: React.FC = () => {
   return (
-    <div className="bg-gray-200 px-10 py-8 min-h-screen pt-40 static">
+    <div className="bg-gray-200 px-10 py-4 min-h-screen static">
       <div className="flex">
         <NavLink
           to="/"
