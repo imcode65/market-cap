@@ -30,7 +30,7 @@ const SearchBar: React.FC = () => {
           </span>
         </div>
       </div>
-      <div className="hidden lg:block">
+      <div className="hidden xl:block">
         <div className="flex items-center p-1 px-4 bg-gray-300 placeholder-gray-400 border-none rounded-full">
           <input
             placeholder="Search..."
@@ -52,7 +52,7 @@ const SearchBar: React.FC = () => {
           </svg>
         </div>
       </div>
-      <div className="block md:hidden">
+      <div className="block xl:hidden">
         <button className="p-2" onClick={() => setMenuStatus(!menuStatus)}>
           <MenuIcon className="font-black" width={26} height={26} />
         </button>
