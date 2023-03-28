@@ -1,5 +1,12 @@
 import { useState } from "react";
-import { CapitionIcon, MenuIcon, CloseIcon } from "../../assets/icons";
+import {
+  CapitionIcon,
+  MenuIcon,
+  CloseIcon,
+  PortfolioIcon,
+  WatchlistIcon,
+  WalletIcon,
+} from "../../assets/icons";
 
 const SearchBar: React.FC = () => {
   const [menuStatus, setMenuStatus] = useState<boolean>(false);
@@ -47,37 +54,60 @@ const SearchBar: React.FC = () => {
       </div>
       <div className="block md:hidden">
         <button className="p-2" onClick={() => setMenuStatus(!menuStatus)}>
-          <MenuIcon className="font-black" width={30} height={30} />
+          <MenuIcon className="font-black" width={24} height={24} />
         </button>
       </div>
       {/* responsive sidebar start */}
       <div
-        className={`transform w-44 z-40 h-full absolute px-2 bg-white shadow flex-col justify-between sm:hidden transition duration-150 ease-in-out ${
-          menuStatus ? "-translate-x-44" : ""
+        className={`transform w-full z-40 h-full absolute bg-gray-100 top-0 left-0 shadow flex-col sm:hidden transition duration-150 ease-in-out ${
+          menuStatus ? "-translate-x-full" : ""
         }`}
       >
-        <button className="p-2" onClick={() => setMenuStatus(!menuStatus)}>
-          <CloseIcon className="font-black" width={30} height={30} />
-        </button>
-        <div>
-          <span className="font-bold mr-10 hover:text-blue-500 hover:cursor-pointer">
-            El Capition
-          </span>
+        <div className="bg-white">
+          <button className="p-2" onClick={() => setMenuStatus(!menuStatus)}>
+            <CloseIcon className="font-black" width={26} height={26} />
+          </button>
         </div>
-        <div>
-          <span className="font-bold mr-10 hover:text-blue-500 hover:cursor-pointer">
-            Cryptocurrencies
-          </span>
-        </div>
-        <div>
-          <span className="font-bold mr-10 hover:text-blue-500 hover:cursor-pointer">
-            FAQ
-          </span>
-        </div>
-        <div>
-          <span className="font-bold mr-10 hover:text-blue-500 hover:cursor-pointer">
-            Community
-          </span>
+        <div className="text-xl px-4 py-2">
+          <div className="flex border-b-2 border-gray-600 py-2 px-1">
+            <CapitionIcon className="mr-2 w-8 h-8" />
+            <span className="font-bold mr-10 hover:text-blue-500 hover:cursor-pointer">
+              El Capition
+            </span>
+          </div>
+          <div className="border-b-2 border-gray-600 py-2 px-1">
+            <span className="font-bold mr-10 hover:text-blue-500 hover:cursor-pointer">
+              Cryptocurrencies
+            </span>
+          </div>
+          <div className="border-b-2 border-gray-600 py-2 px-1">
+            <span className="font-bold mr-10 hover:text-blue-500 hover:cursor-pointer">
+              FAQ
+            </span>
+          </div>
+          <div className="border-b-2 border-gray-600 py-2 px-1">
+            <span className="font-bold mr-10 hover:text-blue-500 hover:cursor-pointer">
+              Community
+            </span>
+          </div>
+          <div className="border-b-2 border-gray-600 py-2 px-1">
+            <span className="cursor-pointer font-bold mr-4 flex">
+              <WatchlistIcon className="mr-1" width={24} height={24} />
+              Whachlist
+            </span>
+          </div>
+          <div className="border-b-2 border-gray-600 py-2 px-1">
+            <span className="cursor-pointer font-bold mr-4 flex items-center">
+              <PortfolioIcon className="mr-1" width={24} height={24} />
+              Portfolio
+            </span>
+          </div>
+          <div className="py-1 px-1 mt-2">
+            <button className="bg-gray-300 w-full hover:bg-gray-400 text-black font-bold py-2 px-4 flex justify-center items-center rounded-full">
+              <WalletIcon className="mr-2" width={24} height={24} />
+              <span>Connect Wallet</span>
+            </button>
+          </div>
         </div>
       </div>
       {/* responsive sidebar end */}
