@@ -34,7 +34,7 @@ const data = [
 
 const Dashboard: React.FC = () => {
   return (
-    <div className="bg-gray-200 px-10 py-4 min-h-screen static">
+    <div className="bg-gray-200 sm:px-10 px-4 py-4 min-h-screen static">
       <div className="mb-8">
         <p className="text-black font-bold text-3xl">
           Today's Cryptocurrency Prices by Market Cap
@@ -59,7 +59,7 @@ const Dashboard: React.FC = () => {
           );
         })}
       </div>
-      <div className="flex justify-between">
+      <div className="flex justify-between items-center">
         <TabComponent />
         <DropDownAllTypes />
       </div>

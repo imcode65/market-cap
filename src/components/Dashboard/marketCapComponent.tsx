@@ -18,7 +18,7 @@ export interface IMarketCap {
 
 const MarketCapComponent: React.FC<IMarketCap> = (props) => {
   return (
-    <div className="rounded-3xl p-6 bg-white">
+    <div className="rounded-3xl sm:p-6 p-2 bg-white">
       <div className="flex justify-between">
         <div className="flex items-center">
           {props.title === "Trending" ? (
@@ -34,11 +34,11 @@ const MarketCapComponent: React.FC<IMarketCap> = (props) => {
           More &gt;
         </span>
       </div>
-      <div className="py-4">
+      <div className="py-4 text-sm sm:text-base">
         {props.data.map((val, index) => {
           return (
             <div className="flex justify-between m-2" key={index}>
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-3 whitespace-nowrap">
                 <span>{index + 1}</span>
                 {val.icon === "SHIB" ? (
                   <img

@@ -39,7 +39,7 @@ const TabComponent: React.FC = () => {
   }, [activeTabIndex]);
 
   return (
-    <div className="relative px-6 py-2 bg-white rounded-xl">
+    <div className="relative mr-2 px-4 py-2 bg-white rounded-xl overflow-auto">
       <div className="flex">
         {tabsData.map((tab, idx) => {
           return (

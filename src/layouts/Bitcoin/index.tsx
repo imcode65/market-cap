@@ -26,6 +26,7 @@ const BitcoinPage: React.FC = () => {
           Bitcoin
         </NavLink>
       </div>
+      <div></div>
     </div>
   );
 };

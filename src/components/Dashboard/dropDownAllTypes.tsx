@@ -33,15 +33,15 @@ const DropDownAllTypes: React.FC = () => {
     <div className="relative inline-block group">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className={`bg-white px-4 py-3 rounded-full font-bold flex items-center hover:outline-yellow-400 ${
+        className={`bg-white text-sm whitespace-nowrap px-4 py-3 rounded-full font-bold flex items-center hover:outline-yellow-400 ${
           isOpen ? "outline outline-yellow-400 outline-1" : "outline-none"
         }`}
       >
-        All Types
+        <span className="hidden sm:block">All Types</span>
         <ArrowDown className="w-5 h-5" width={32} height={32} />
       </button>
       <div
-        className={`mt-2 px-8 py-4 absolute z-10 -left-[535px] bg-white rounded-2xl shadow-lg transform transition-all duration-300 ease-in-out ${
+        className={`mt-2 px-4 text-xs py-4 absolute z-10 sm:-left-[470px] -left-[300px] bg-white rounded-2xl shadow-lg transform transition-all duration-300 ease-in-out ${
           isOpen ? "opacity-100 scale-y-100" : "opacity-0 scale-y-0"
         }`}
       >
@@ -68,15 +68,15 @@ const DropDownAllTypes: React.FC = () => {
             </svg>
           </div>
         </div>
-        <div className="grid grid-cols-3 gap-2 text-sm">
+        <div className="grid sm:grid-cols-3 grid-cols-2 gap-2 text-sm">
           {typeData.map((val, key) => {
             return (
-              <div className="p-2 cursor-pointer" key={key}>
+              <div className="p-1 cursor-pointer" key={key}>
                 <span
                   onClick={() => setSelected(key)}
                   className={`${
                     selected === key ? "bg-yellow-300" : ""
-                  } rounded-lg px-4 py-2 font-bold`}
+                  } rounded-lg px-4 py-2 font-bold whitespace-nowrap`}
                 >
                   {val}
                 </span>
