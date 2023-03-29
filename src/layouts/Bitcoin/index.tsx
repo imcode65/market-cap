@@ -2,10 +2,11 @@ import { NavLink } from "react-router-dom";
 import GrayButton from "../../components/coin/GrayButton";
 import BitcoinSVG from "../../assets/svg/bitcoin.svg";
 import { WatchlistIcon, ArrowUpIcon } from "../../assets/icons";
+import BitTabComponent from "../../components/Bitcoin/TabComponent";
 
 const BitcoinPage: React.FC = () => {
   return (
-    <div className="bg-gray-200 px-10 py-4 min-h-screen static">
+    <div className="bg-gray-200 sm:px-10 px-4 py-4 min-h-screen static">
       <div className="flex">
         <NavLink
           to="/"
@@ -29,7 +30,7 @@ const BitcoinPage: React.FC = () => {
           Bitcoin
         </NavLink>
       </div>
-      <div className="grid grid-cols-3 gap-x-8">
+      <div className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-x-8 gap-y-4">
         <div className="col-span-1">
           <div className="flex items-center my-4">
             <img className="w-10 mr-2" src={BitcoinSVG} alt="bitcoin" />
@@ -55,10 +56,10 @@ const BitcoinPage: React.FC = () => {
             <span className="text-blue-500 hover:cursor-pointer">View All</span>
           </div>
         </div>
-        <div className="col-span-2">
+        <div className="md:col-span-2 col-span-1">
           <div className="font-bold flex items-center mb-6">
-            <span className="text-[70px] mr-2">$28,013.46</span>
-            <span className="px-2 py-3 text-white bg-green-500 rounded-2xl flex items-center text-2xl">
+            <span className="md:text-[60px] text-3xl mr-2 p-2">$28,013.46</span>
+            <span className="p-2 text-white bg-green-500 rounded-2xl flex items-center md:text-2xl text-md">
               <ArrowUpIcon
                 className="mt-2"
                 color="white"
@@ -68,7 +69,7 @@ const BitcoinPage: React.FC = () => {
               0.02%
             </span>
           </div>
-          <div className="grid grid-cols-4">
+          <div className="grid lg:grid-cols-4 grid-cols-2 gap-2">
             <div className="flex-col">
               <span className="text-[#7D7D7D]">Market Cap</span>
               <br />
@@ -114,12 +115,15 @@ const BitcoinPage: React.FC = () => {
             <div className="flex-col">
               <span className="text-[#7D7D7D]">Circulating Supply</span>
               <br />
-              <span className="font-bold">19,327,200 BTC</span>
+              <div className="flex justify-between">
+                <span className="font-bold">19,327,200 BTC</span>
+                <span className="font-bold">92%</span>
+              </div>
               <span className="flex items-center text-green-500">
                 <div className="w-full bg-gray-400 rounded-full h-2.5 dark:bg-gray-700">
                   <div
                     className="bg-gray-700 h-2.5 rounded-full"
-                    style={{ width: "60%" }}
+                    style={{ width: "92%" }}
                   ></div>
                 </div>
               </span>
@@ -127,6 +131,13 @@ const BitcoinPage: React.FC = () => {
           </div>
         </div>
       </div>
+      <div className="sm:flex items-center justify-between my-4">
+        <span className="font-bold md:text-3xl text-xl whitespace-nowrap mx-2 mb-2">
+          Bitcoin To USD Chart
+        </span>
+        <BitTabComponent />
+      </div>
+      <div>Chart</div>
     </div>
   );
 };

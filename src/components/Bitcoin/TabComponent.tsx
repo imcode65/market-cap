@@ -2,23 +2,26 @@ import { useEffect, useRef, useState } from "react";
 
 const tabsData = [
   {
-    label: "Top",
+    label: "1D",
   },
   {
-    label: "Trending",
+    label: "7D",
   },
   {
-    label: "Gainer",
+    label: "1M",
   },
   {
-    label: "Losers",
+    label: "3M",
   },
   {
-    label: "Updated",
+    label: "1Y",
+  },
+  {
+    label: "All",
   },
 ];
 
-const TabComponent: React.FC = () => {
+const BitTabComponent: React.FC = () => {
   const [activeTabIndex, setActiveTabIndex] = useState(0);
   const [tabUnderlineWidth, setTabUnderlineWidth] = useState(0);
   const [tabUnderlineLeft, setTabUnderlineLeft] = useState(0);
@@ -39,14 +42,14 @@ const TabComponent: React.FC = () => {
   }, [activeTabIndex]);
 
   return (
-    <div className="relative mr-2 px-4 py-2 bg-white rounded-xl overflow-auto">
+    <div className="relative mr-2 px-4 py-2 bg-white rounded-lg overflow-auto">
       <div className="flex">
         {tabsData.map((tab, idx) => {
           return (
             <button
               key={idx}
               ref={(el) => (tabsRef.current[idx] = el)}
-              className="p-2 px-4 mx-2 z-20 font-bold"
+              className="px-5 mx-2 z-20 font-bold"
               onClick={() => setActiveTabIndex(idx)}
             >
               {tab.label}
@@ -55,11 +58,11 @@ const TabComponent: React.FC = () => {
         })}
       </div>
       <div
-        className="absolute z-10 block bottom-3 bg-yellow-400 transition-all duration-300 h-8 rounded-xl"
+        className="absolute z-10 block bottom-2 bg-yellow-400 transition-all duration-300 h-6 rounded-lg"
         style={{ left: tabUnderlineLeft, width: tabUnderlineWidth }}
       />
     </div>
   );
 };
 
-export default TabComponent;
+export default BitTabComponent;
