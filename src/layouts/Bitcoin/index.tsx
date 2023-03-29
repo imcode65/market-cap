@@ -57,7 +57,7 @@ const BitcoinPage: React.FC = () => {
           </div>
         </div>
         <div className="md:col-span-2 col-span-1">
-          <div className="font-bold flex items-center mb-6">
+          <div className="font-bold flex items-center mb-8">
             <span className="md:text-[60px] text-3xl mr-2 p-2">$28,013.46</span>
             <span className="p-2 text-white bg-green-500 rounded-2xl flex items-center md:text-2xl text-md">
               <ArrowUpIcon
